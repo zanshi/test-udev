@@ -1,0 +1,2807 @@
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        66306,
+    ),
+    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+    device_node: Some(
+        "/dev/nvme0n1",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "nvme0n1",
+    instance_number: Some(
+        1,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: Some(
+        Device {
+            initialized: true,
+            device_major_minor_number: Some(
+                60928,
+            ),
+            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+            device_node: Some(
+                "/dev/nvme0",
+            ),
+            subsystem_name: Some(
+                "nvme",
+            ),
+            system_name: "nvme0",
+            instance_number: Some(
+                0,
+            ),
+            device_type: None,
+            driver: None,
+            action: None,
+            parent: Some(
+                Device {
+                    initialized: true,
+                    device_major_minor_number: None,
+                    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                    device_node: None,
+                    subsystem_name: Some(
+                        "pci",
+                    ),
+                    system_name: "0000:09:00.0",
+                    instance_number: Some(
+                        0,
+                    ),
+                    device_type: None,
+                    driver: Some(
+                        "nvme",
+                    ),
+                    action: None,
+                    parent: Some(
+                        Device {
+                            initialized: true,
+                            device_major_minor_number: None,
+                            system_path: "/sys/devices/pci0000:00/0000:00:01.2",
+                            device_path: "/devices/pci0000:00/0000:00:01.2",
+                            device_node: None,
+                            subsystem_name: Some(
+                                "pci",
+                            ),
+                            system_name: "0000:00:01.2",
+                            instance_number: Some(
+                                2,
+                            ),
+                            device_type: None,
+                            driver: Some(
+                                "pcieport",
+                            ),
+                            action: None,
+                            parent: Some(
+                                Device {
+                                    initialized: false,
+                                    device_major_minor_number: None,
+                                    system_path: "/sys/devices/pci0000:00",
+                                    device_path: "/devices/pci0000:00",
+                                    device_node: None,
+                                    subsystem_name: None,
+                                    system_name: "pci0000:00",
+                                    instance_number: Some(
+                                        0,
+                                    ),
+                                    device_type: None,
+                                    driver: None,
+                                    action: None,
+                                    parent: None,
+                                },
+                            ),
+                        },
+                    ),
+                },
+            ),
+        },
+    ),
+}
+  [properties]
+    - "DEVLINKS" "/dev/disk/by-id/nvme-eui.0025385b81b1d6a1 /dev/disk/by-id/nvme-Samsung_SSD_970_EVO_1TB_S467NX0KB30028F /dev/disk/by-path/pci-0000:09:00.0-nvme-1"
+    - "DEVNAME" "/dev/nvme0n1"
+    - "DEVPATH" "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1"
+    - "DEVTYPE" "disk"
+    - "ID_MODEL" "Samsung SSD 970 EVO 1TB"
+    - "ID_PART_TABLE_TYPE" "gpt"
+    - "ID_PART_TABLE_UUID" "f386ef79-79ce-434d-b7b2-8bc51e0a6e94"
+    - "ID_PATH" "pci-0000:09:00.0-nvme-1"
+    - "ID_PATH_TAG" "pci-0000_09_00_0-nvme-1"
+    - "ID_SERIAL" "Samsung SSD 970 EVO 1TB_S467NX0KB30028F"
+    - "ID_SERIAL_SHORT" "S467NX0KB30028F"
+    - "ID_WWN" "eui.0025385b81b1d6a1"
+    - "MAJOR" "259"
+    - "MINOR" "2"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1763725"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        66307,
+    ),
+    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p1",
+    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p1",
+    device_node: Some(
+        "/dev/nvme0n1p1",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "nvme0n1p1",
+    instance_number: Some(
+        1,
+    ),
+    device_type: Some(
+        "partition",
+    ),
+    driver: None,
+    action: None,
+    parent: Some(
+        Device {
+            initialized: true,
+            device_major_minor_number: Some(
+                66306,
+            ),
+            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+            device_node: Some(
+                "/dev/nvme0n1",
+            ),
+            subsystem_name: Some(
+                "block",
+            ),
+            system_name: "nvme0n1",
+            instance_number: Some(
+                1,
+            ),
+            device_type: Some(
+                "disk",
+            ),
+            driver: None,
+            action: None,
+            parent: Some(
+                Device {
+                    initialized: true,
+                    device_major_minor_number: Some(
+                        60928,
+                    ),
+                    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+                    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+                    device_node: Some(
+                        "/dev/nvme0",
+                    ),
+                    subsystem_name: Some(
+                        "nvme",
+                    ),
+                    system_name: "nvme0",
+                    instance_number: Some(
+                        0,
+                    ),
+                    device_type: None,
+                    driver: None,
+                    action: None,
+                    parent: Some(
+                        Device {
+                            initialized: true,
+                            device_major_minor_number: None,
+                            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                            device_node: None,
+                            subsystem_name: Some(
+                                "pci",
+                            ),
+                            system_name: "0000:09:00.0",
+                            instance_number: Some(
+                                0,
+                            ),
+                            device_type: None,
+                            driver: Some(
+                                "nvme",
+                            ),
+                            action: None,
+                            parent: Some(
+                                Device {
+                                    initialized: true,
+                                    device_major_minor_number: None,
+                                    system_path: "/sys/devices/pci0000:00/0000:00:01.2",
+                                    device_path: "/devices/pci0000:00/0000:00:01.2",
+                                    device_node: None,
+                                    subsystem_name: Some(
+                                        "pci",
+                                    ),
+                                    system_name: "0000:00:01.2",
+                                    instance_number: Some(
+                                        2,
+                                    ),
+                                    device_type: None,
+                                    driver: Some(
+                                        "pcieport",
+                                    ),
+                                    action: None,
+                                    parent: Some(
+                                        Device {
+                                            initialized: false,
+                                            device_major_minor_number: None,
+                                            system_path: "/sys/devices/pci0000:00",
+                                            device_path: "/devices/pci0000:00",
+                                            device_node: None,
+                                            subsystem_name: None,
+                                            system_name: "pci0000:00",
+                                            instance_number: Some(
+                                                0,
+                                            ),
+                                            device_type: None,
+                                            driver: None,
+                                            action: None,
+                                            parent: None,
+                                        },
+                                    ),
+                                },
+                            ),
+                        },
+                    ),
+                },
+            ),
+        },
+    ),
+}
+  [properties]
+    - "DEVLINKS" "/dev/disk/by-partuuid/ae00f0fa-5f93-49bd-b447-a4d78be06420 /dev/disk/by-partlabel/Basic\\x20data\\x20partition /dev/disk/by-id/nvme-eui.0025385b81b1d6a1-part1 /dev/disk/by-uuid/1010F04B10F038F4 /dev/disk/by-id/nvme-Samsung_SSD_970_EVO_1TB_S467NX0KB30028F-part1 /dev/disk/by-path/pci-0000:09:00.0-nvme-1-part1"
+    - "DEVNAME" "/dev/nvme0n1p1"
+    - "DEVPATH" "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p1"
+    - "DEVTYPE" "partition"
+    - "ID_FS_TYPE" "ntfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_UUID" "1010F04B10F038F4"
+    - "ID_FS_UUID_ENC" "1010F04B10F038F4"
+    - "ID_MODEL" "Samsung SSD 970 EVO 1TB"
+    - "ID_PART_ENTRY_DISK" "259:2"
+    - "ID_PART_ENTRY_FLAGS" "0x8000000000000001"
+    - "ID_PART_ENTRY_NAME" "Basic\\x20data\\x20partition"
+    - "ID_PART_ENTRY_NUMBER" "1"
+    - "ID_PART_ENTRY_OFFSET" "2048"
+    - "ID_PART_ENTRY_SCHEME" "gpt"
+    - "ID_PART_ENTRY_SIZE" "1021952"
+    - "ID_PART_ENTRY_TYPE" "de94bba4-06d1-4d40-a16a-bfd50179d6ac"
+    - "ID_PART_ENTRY_UUID" "ae00f0fa-5f93-49bd-b447-a4d78be06420"
+    - "ID_PART_TABLE_TYPE" "gpt"
+    - "ID_PART_TABLE_UUID" "f386ef79-79ce-434d-b7b2-8bc51e0a6e94"
+    - "ID_PATH" "pci-0000:09:00.0-nvme-1"
+    - "ID_PATH_TAG" "pci-0000_09_00_0-nvme-1"
+    - "ID_SERIAL" "Samsung SSD 970 EVO 1TB_S467NX0KB30028F"
+    - "ID_SERIAL_SHORT" "S467NX0KB30028F"
+    - "ID_WWN" "eui.0025385b81b1d6a1"
+    - "MAJOR" "259"
+    - "MINOR" "3"
+    - "PARTN" "1"
+    - "PARTNAME" "Basic data partition"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "UDISKS_IGNORE" "1"
+    - "USEC_INITIALIZED" "1770108"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        66308,
+    ),
+    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p2",
+    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p2",
+    device_node: Some(
+        "/dev/nvme0n1p2",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "nvme0n1p2",
+    instance_number: Some(
+        2,
+    ),
+    device_type: Some(
+        "partition",
+    ),
+    driver: None,
+    action: None,
+    parent: Some(
+        Device {
+            initialized: true,
+            device_major_minor_number: Some(
+                66306,
+            ),
+            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+            device_node: Some(
+                "/dev/nvme0n1",
+            ),
+            subsystem_name: Some(
+                "block",
+            ),
+            system_name: "nvme0n1",
+            instance_number: Some(
+                1,
+            ),
+            device_type: Some(
+                "disk",
+            ),
+            driver: None,
+            action: None,
+            parent: Some(
+                Device {
+                    initialized: true,
+                    device_major_minor_number: Some(
+                        60928,
+                    ),
+                    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+                    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+                    device_node: Some(
+                        "/dev/nvme0",
+                    ),
+                    subsystem_name: Some(
+                        "nvme",
+                    ),
+                    system_name: "nvme0",
+                    instance_number: Some(
+                        0,
+                    ),
+                    device_type: None,
+                    driver: None,
+                    action: None,
+                    parent: Some(
+                        Device {
+                            initialized: true,
+                            device_major_minor_number: None,
+                            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                            device_node: None,
+                            subsystem_name: Some(
+                                "pci",
+                            ),
+                            system_name: "0000:09:00.0",
+                            instance_number: Some(
+                                0,
+                            ),
+                            device_type: None,
+                            driver: Some(
+                                "nvme",
+                            ),
+                            action: None,
+                            parent: Some(
+                                Device {
+                                    initialized: true,
+                                    device_major_minor_number: None,
+                                    system_path: "/sys/devices/pci0000:00/0000:00:01.2",
+                                    device_path: "/devices/pci0000:00/0000:00:01.2",
+                                    device_node: None,
+                                    subsystem_name: Some(
+                                        "pci",
+                                    ),
+                                    system_name: "0000:00:01.2",
+                                    instance_number: Some(
+                                        2,
+                                    ),
+                                    device_type: None,
+                                    driver: Some(
+                                        "pcieport",
+                                    ),
+                                    action: None,
+                                    parent: Some(
+                                        Device {
+                                            initialized: false,
+                                            device_major_minor_number: None,
+                                            system_path: "/sys/devices/pci0000:00",
+                                            device_path: "/devices/pci0000:00",
+                                            device_node: None,
+                                            subsystem_name: None,
+                                            system_name: "pci0000:00",
+                                            instance_number: Some(
+                                                0,
+                                            ),
+                                            device_type: None,
+                                            driver: None,
+                                            action: None,
+                                            parent: None,
+                                        },
+                                    ),
+                                },
+                            ),
+                        },
+                    ),
+                },
+            ),
+        },
+    ),
+}
+  [properties]
+    - "DEVLINKS" "/dev/disk/by-partlabel/EFI\\x20system\\x20partition /dev/disk/by-partuuid/6faffbde-4413-4ad6-9747-aaaec8d9975a /dev/disk/by-uuid/48C8-12FD /dev/disk/by-id/nvme-eui.0025385b81b1d6a1-part2 /dev/disk/by-id/nvme-Samsung_SSD_970_EVO_1TB_S467NX0KB30028F-part2 /dev/disk/by-path/pci-0000:09:00.0-nvme-1-part2"
+    - "DEVNAME" "/dev/nvme0n1p2"
+    - "DEVPATH" "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p2"
+    - "DEVTYPE" "partition"
+    - "ID_FS_TYPE" "vfat"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_UUID" "48C8-12FD"
+    - "ID_FS_UUID_ENC" "48C8-12FD"
+    - "ID_FS_VERSION" "FAT32"
+    - "ID_MODEL" "Samsung SSD 970 EVO 1TB"
+    - "ID_PART_ENTRY_DISK" "259:2"
+    - "ID_PART_ENTRY_FLAGS" "0x8000000000000000"
+    - "ID_PART_ENTRY_NAME" "EFI\\x20system\\x20partition"
+    - "ID_PART_ENTRY_NUMBER" "2"
+    - "ID_PART_ENTRY_OFFSET" "1024000"
+    - "ID_PART_ENTRY_SCHEME" "gpt"
+    - "ID_PART_ENTRY_SIZE" "204800"
+    - "ID_PART_ENTRY_TYPE" "c12a7328-f81f-11d2-ba4b-00a0c93ec93b"
+    - "ID_PART_ENTRY_UUID" "6faffbde-4413-4ad6-9747-aaaec8d9975a"
+    - "ID_PART_TABLE_TYPE" "gpt"
+    - "ID_PART_TABLE_UUID" "f386ef79-79ce-434d-b7b2-8bc51e0a6e94"
+    - "ID_PATH" "pci-0000:09:00.0-nvme-1"
+    - "ID_PATH_TAG" "pci-0000_09_00_0-nvme-1"
+    - "ID_SERIAL" "Samsung SSD 970 EVO 1TB_S467NX0KB30028F"
+    - "ID_SERIAL_SHORT" "S467NX0KB30028F"
+    - "ID_WWN" "eui.0025385b81b1d6a1"
+    - "MAJOR" "259"
+    - "MINOR" "4"
+    - "PARTN" "2"
+    - "PARTNAME" "EFI system partition"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "UDISKS_IGNORE" "1"
+    - "USEC_INITIALIZED" "1770395"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        66309,
+    ),
+    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p3",
+    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p3",
+    device_node: Some(
+        "/dev/nvme0n1p3",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "nvme0n1p3",
+    instance_number: Some(
+        3,
+    ),
+    device_type: Some(
+        "partition",
+    ),
+    driver: None,
+    action: None,
+    parent: Some(
+        Device {
+            initialized: true,
+            device_major_minor_number: Some(
+                66306,
+            ),
+            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+            device_node: Some(
+                "/dev/nvme0n1",
+            ),
+            subsystem_name: Some(
+                "block",
+            ),
+            system_name: "nvme0n1",
+            instance_number: Some(
+                1,
+            ),
+            device_type: Some(
+                "disk",
+            ),
+            driver: None,
+            action: None,
+            parent: Some(
+                Device {
+                    initialized: true,
+                    device_major_minor_number: Some(
+                        60928,
+                    ),
+                    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+                    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+                    device_node: Some(
+                        "/dev/nvme0",
+                    ),
+                    subsystem_name: Some(
+                        "nvme",
+                    ),
+                    system_name: "nvme0",
+                    instance_number: Some(
+                        0,
+                    ),
+                    device_type: None,
+                    driver: None,
+                    action: None,
+                    parent: Some(
+                        Device {
+                            initialized: true,
+                            device_major_minor_number: None,
+                            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                            device_node: None,
+                            subsystem_name: Some(
+                                "pci",
+                            ),
+                            system_name: "0000:09:00.0",
+                            instance_number: Some(
+                                0,
+                            ),
+                            device_type: None,
+                            driver: Some(
+                                "nvme",
+                            ),
+                            action: None,
+                            parent: Some(
+                                Device {
+                                    initialized: true,
+                                    device_major_minor_number: None,
+                                    system_path: "/sys/devices/pci0000:00/0000:00:01.2",
+                                    device_path: "/devices/pci0000:00/0000:00:01.2",
+                                    device_node: None,
+                                    subsystem_name: Some(
+                                        "pci",
+                                    ),
+                                    system_name: "0000:00:01.2",
+                                    instance_number: Some(
+                                        2,
+                                    ),
+                                    device_type: None,
+                                    driver: Some(
+                                        "pcieport",
+                                    ),
+                                    action: None,
+                                    parent: Some(
+                                        Device {
+                                            initialized: false,
+                                            device_major_minor_number: None,
+                                            system_path: "/sys/devices/pci0000:00",
+                                            device_path: "/devices/pci0000:00",
+                                            device_node: None,
+                                            subsystem_name: None,
+                                            system_name: "pci0000:00",
+                                            instance_number: Some(
+                                                0,
+                                            ),
+                                            device_type: None,
+                                            driver: None,
+                                            action: None,
+                                            parent: None,
+                                        },
+                                    ),
+                                },
+                            ),
+                        },
+                    ),
+                },
+            ),
+        },
+    ),
+}
+  [properties]
+    - "DEVLINKS" "/dev/disk/by-partuuid/4897befd-dc43-4f1c-afcd-47a7500352f3 /dev/disk/by-id/nvme-eui.0025385b81b1d6a1-part3 /dev/disk/by-path/pci-0000:09:00.0-nvme-1-part3 /dev/disk/by-partlabel/Microsoft\\x20reserved\\x20partition /dev/disk/by-id/nvme-Samsung_SSD_970_EVO_1TB_S467NX0KB30028F-part3"
+    - "DEVNAME" "/dev/nvme0n1p3"
+    - "DEVPATH" "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p3"
+    - "DEVTYPE" "partition"
+    - "ID_MODEL" "Samsung SSD 970 EVO 1TB"
+    - "ID_PART_ENTRY_DISK" "259:2"
+    - "ID_PART_ENTRY_FLAGS" "0x8000000000000000"
+    - "ID_PART_ENTRY_NAME" "Microsoft\\x20reserved\\x20partition"
+    - "ID_PART_ENTRY_NUMBER" "3"
+    - "ID_PART_ENTRY_OFFSET" "1228800"
+    - "ID_PART_ENTRY_SCHEME" "gpt"
+    - "ID_PART_ENTRY_SIZE" "32768"
+    - "ID_PART_ENTRY_TYPE" "e3c9e316-0b5c-4db8-817d-f92df00215ae"
+    - "ID_PART_ENTRY_UUID" "4897befd-dc43-4f1c-afcd-47a7500352f3"
+    - "ID_PART_TABLE_TYPE" "gpt"
+    - "ID_PART_TABLE_UUID" "f386ef79-79ce-434d-b7b2-8bc51e0a6e94"
+    - "ID_PATH" "pci-0000:09:00.0-nvme-1"
+    - "ID_PATH_TAG" "pci-0000_09_00_0-nvme-1"
+    - "ID_SERIAL" "Samsung SSD 970 EVO 1TB_S467NX0KB30028F"
+    - "ID_SERIAL_SHORT" "S467NX0KB30028F"
+    - "ID_WWN" "eui.0025385b81b1d6a1"
+    - "MAJOR" "259"
+    - "MINOR" "5"
+    - "PARTN" "3"
+    - "PARTNAME" "Microsoft reserved partition"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "UDISKS_IGNORE" "1"
+    - "USEC_INITIALIZED" "1765570"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        66310,
+    ),
+    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p4",
+    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p4",
+    device_node: Some(
+        "/dev/nvme0n1p4",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "nvme0n1p4",
+    instance_number: Some(
+        4,
+    ),
+    device_type: Some(
+        "partition",
+    ),
+    driver: None,
+    action: None,
+    parent: Some(
+        Device {
+            initialized: true,
+            device_major_minor_number: Some(
+                66306,
+            ),
+            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1",
+            device_node: Some(
+                "/dev/nvme0n1",
+            ),
+            subsystem_name: Some(
+                "block",
+            ),
+            system_name: "nvme0n1",
+            instance_number: Some(
+                1,
+            ),
+            device_type: Some(
+                "disk",
+            ),
+            driver: None,
+            action: None,
+            parent: Some(
+                Device {
+                    initialized: true,
+                    device_major_minor_number: Some(
+                        60928,
+                    ),
+                    system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+                    device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0",
+                    device_node: Some(
+                        "/dev/nvme0",
+                    ),
+                    subsystem_name: Some(
+                        "nvme",
+                    ),
+                    system_name: "nvme0",
+                    instance_number: Some(
+                        0,
+                    ),
+                    device_type: None,
+                    driver: None,
+                    action: None,
+                    parent: Some(
+                        Device {
+                            initialized: true,
+                            device_major_minor_number: None,
+                            system_path: "/sys/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                            device_path: "/devices/pci0000:00/0000:00:01.2/0000:09:00.0",
+                            device_node: None,
+                            subsystem_name: Some(
+                                "pci",
+                            ),
+                            system_name: "0000:09:00.0",
+                            instance_number: Some(
+                                0,
+                            ),
+                            device_type: None,
+                            driver: Some(
+                                "nvme",
+                            ),
+                            action: None,
+                            parent: Some(
+                                Device {
+                                    initialized: true,
+                                    device_major_minor_number: None,
+                                    system_path: "/sys/devices/pci0000:00/0000:00:01.2",
+                                    device_path: "/devices/pci0000:00/0000:00:01.2",
+                                    device_node: None,
+                                    subsystem_name: Some(
+                                        "pci",
+                                    ),
+                                    system_name: "0000:00:01.2",
+                                    instance_number: Some(
+                                        2,
+                                    ),
+                                    device_type: None,
+                                    driver: Some(
+                                        "pcieport",
+                                    ),
+                                    action: None,
+                                    parent: Some(
+                                        Device {
+                                            initialized: false,
+                                            device_major_minor_number: None,
+                                            system_path: "/sys/devices/pci0000:00",
+                                            device_path: "/devices/pci0000:00",
+                                            device_node: None,
+                                            subsystem_name: None,
+                                            system_name: "pci0000:00",
+                                            instance_number: Some(
+                                                0,
+                                            ),
+                                            device_type: None,
+                                            driver: None,
+                                            action: None,
+                                            parent: None,
+                                        },
+                                    ),
+                                },
+                            ),
+                        },
+                    ),
+                },
+            ),
+        },
+    ),
+}
+  [properties]
+    - "DEVLINKS" "/dev/disk/by-partlabel/Basic\\x20data\\x20partition /dev/disk/by-id/nvme-Samsung_SSD_970_EVO_1TB_S467NX0KB30028F-part4 /dev/disk/by-path/pci-0000:09:00.0-nvme-1-part4 /dev/disk/by-id/nvme-eui.0025385b81b1d6a1-part4 /dev/disk/by-partuuid/0357c3e6-494c-424e-a261-a7a11ca35a92 /dev/disk/by-uuid/CC4AD5054AD4ED68"
+    - "DEVNAME" "/dev/nvme0n1p4"
+    - "DEVPATH" "/devices/pci0000:00/0000:00:01.2/0000:09:00.0/nvme/nvme0/nvme0n1/nvme0n1p4"
+    - "DEVTYPE" "partition"
+    - "ID_FS_TYPE" "ntfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_UUID" "CC4AD5054AD4ED68"
+    - "ID_FS_UUID_ENC" "CC4AD5054AD4ED68"
+    - "ID_MODEL" "Samsung SSD 970 EVO 1TB"
+    - "ID_PART_ENTRY_DISK" "259:2"
+    - "ID_PART_ENTRY_NAME" "Basic\\x20data\\x20partition"
+    - "ID_PART_ENTRY_NUMBER" "4"
+    - "ID_PART_ENTRY_OFFSET" "1261568"
+    - "ID_PART_ENTRY_SCHEME" "gpt"
+    - "ID_PART_ENTRY_SIZE" "1952262144"
+    - "ID_PART_ENTRY_TYPE" "ebd0a0a2-b9e5-4433-87c0-68b6b72699c7"
+    - "ID_PART_ENTRY_UUID" "0357c3e6-494c-424e-a261-a7a11ca35a92"
+    - "ID_PART_TABLE_TYPE" "gpt"
+    - "ID_PART_TABLE_UUID" "f386ef79-79ce-434d-b7b2-8bc51e0a6e94"
+    - "ID_PATH" "pci-0000:09:00.0-nvme-1"
+    - "ID_PATH_TAG" "pci-0000_09_00_0-nvme-1"
+    - "ID_SERIAL" "Samsung SSD 970 EVO 1TB_S467NX0KB30028F"
+    - "ID_SERIAL_SHORT" "S467NX0KB30028F"
+    - "ID_WWN" "eui.0025385b81b1d6a1"
+    - "MAJOR" "259"
+    - "MINOR" "6"
+    - "PARTN" "4"
+    - "PARTNAME" "Basic data partition"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1767985"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        66304,
+    ),
+    system_path: "/sys/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1/nvme1n1",
+    device_path: "/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1/nvme1n1",
+    device_node: Some(
+        "/dev/nvme1n1",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "nvme1n1",
+    instance_number: Some(
+        1,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: Some(
+        Device {
+            initialized: true,
+            device_major_minor_number: Some(
+                60929,
+            ),
+            system_path: "/sys/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1",
+            device_path: "/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1",
+            device_node: Some(
+                "/dev/nvme1",
+            ),
+            subsystem_name: Some(
+                "nvme",
+            ),
+            system_name: "nvme1",
+            instance_number: Some(
+                1,
+            ),
+            device_type: None,
+            driver: None,
+            action: None,
+            parent: Some(
+                Device {
+                    initialized: true,
+                    device_major_minor_number: None,
+                    system_path: "/sys/devices/pci0000:40/0000:40:01.1/0000:41:00.0",
+                    device_path: "/devices/pci0000:40/0000:40:01.1/0000:41:00.0",
+                    device_node: None,
+                    subsystem_name: Some(
+                        "pci",
+                    ),
+                    system_name: "0000:41:00.0",
+                    instance_number: Some(
+                        0,
+                    ),
+                    device_type: None,
+                    driver: Some(
+                        "nvme",
+                    ),
+                    action: None,
+                    parent: Some(
+                        Device {
+                            initialized: true,
+                            device_major_minor_number: None,
+                            system_path: "/sys/devices/pci0000:40/0000:40:01.1",
+                            device_path: "/devices/pci0000:40/0000:40:01.1",
+                            device_node: None,
+                            subsystem_name: Some(
+                                "pci",
+                            ),
+                            system_name: "0000:40:01.1",
+                            instance_number: Some(
+                                1,
+                            ),
+                            device_type: None,
+                            driver: Some(
+                                "pcieport",
+                            ),
+                            action: None,
+                            parent: Some(
+                                Device {
+                                    initialized: false,
+                                    device_major_minor_number: None,
+                                    system_path: "/sys/devices/pci0000:40",
+                                    device_path: "/devices/pci0000:40",
+                                    device_node: None,
+                                    subsystem_name: None,
+                                    system_name: "pci0000:40",
+                                    instance_number: Some(
+                                        40,
+                                    ),
+                                    device_type: None,
+                                    driver: None,
+                                    action: None,
+                                    parent: None,
+                                },
+                            ),
+                        },
+                    ),
+                },
+            ),
+        },
+    ),
+}
+  [properties]
+    - "DEVLINKS" "/dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_500GB_S4EVNJ0N214331P /dev/disk/by-path/pci-0000:41:00.0-nvme-1 /dev/disk/by-id/nvme-eui.002538520140f0f4"
+    - "DEVNAME" "/dev/nvme1n1"
+    - "DEVPATH" "/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1/nvme1n1"
+    - "DEVTYPE" "disk"
+    - "ID_MODEL" "Samsung SSD 970 EVO Plus 500GB"
+    - "ID_PART_TABLE_TYPE" "dos"
+    - "ID_PART_TABLE_UUID" "b5e4250d"
+    - "ID_PATH" "pci-0000:41:00.0-nvme-1"
+    - "ID_PATH_TAG" "pci-0000_41_00_0-nvme-1"
+    - "ID_SERIAL" "Samsung SSD 970 EVO Plus 500GB_S4EVNJ0N214331P"
+    - "ID_SERIAL_SHORT" "S4EVNJ0N214331P"
+    - "ID_WWN" "eui.002538520140f0f4"
+    - "MAJOR" "259"
+    - "MINOR" "0"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "4718326"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        66305,
+    ),
+    system_path: "/sys/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1/nvme1n1/nvme1n1p1",
+    device_path: "/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1/nvme1n1/nvme1n1p1",
+    device_node: Some(
+        "/dev/nvme1n1p1",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "nvme1n1p1",
+    instance_number: Some(
+        1,
+    ),
+    device_type: Some(
+        "partition",
+    ),
+    driver: None,
+    action: None,
+    parent: Some(
+        Device {
+            initialized: true,
+            device_major_minor_number: Some(
+                66304,
+            ),
+            system_path: "/sys/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1/nvme1n1",
+            device_path: "/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1/nvme1n1",
+            device_node: Some(
+                "/dev/nvme1n1",
+            ),
+            subsystem_name: Some(
+                "block",
+            ),
+            system_name: "nvme1n1",
+            instance_number: Some(
+                1,
+            ),
+            device_type: Some(
+                "disk",
+            ),
+            driver: None,
+            action: None,
+            parent: Some(
+                Device {
+                    initialized: true,
+                    device_major_minor_number: Some(
+                        60929,
+                    ),
+                    system_path: "/sys/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1",
+                    device_path: "/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1",
+                    device_node: Some(
+                        "/dev/nvme1",
+                    ),
+                    subsystem_name: Some(
+                        "nvme",
+                    ),
+                    system_name: "nvme1",
+                    instance_number: Some(
+                        1,
+                    ),
+                    device_type: None,
+                    driver: None,
+                    action: None,
+                    parent: Some(
+                        Device {
+                            initialized: true,
+                            device_major_minor_number: None,
+                            system_path: "/sys/devices/pci0000:40/0000:40:01.1/0000:41:00.0",
+                            device_path: "/devices/pci0000:40/0000:40:01.1/0000:41:00.0",
+                            device_node: None,
+                            subsystem_name: Some(
+                                "pci",
+                            ),
+                            system_name: "0000:41:00.0",
+                            instance_number: Some(
+                                0,
+                            ),
+                            device_type: None,
+                            driver: Some(
+                                "nvme",
+                            ),
+                            action: None,
+                            parent: Some(
+                                Device {
+                                    initialized: true,
+                                    device_major_minor_number: None,
+                                    system_path: "/sys/devices/pci0000:40/0000:40:01.1",
+                                    device_path: "/devices/pci0000:40/0000:40:01.1",
+                                    device_node: None,
+                                    subsystem_name: Some(
+                                        "pci",
+                                    ),
+                                    system_name: "0000:40:01.1",
+                                    instance_number: Some(
+                                        1,
+                                    ),
+                                    device_type: None,
+                                    driver: Some(
+                                        "pcieport",
+                                    ),
+                                    action: None,
+                                    parent: Some(
+                                        Device {
+                                            initialized: false,
+                                            device_major_minor_number: None,
+                                            system_path: "/sys/devices/pci0000:40",
+                                            device_path: "/devices/pci0000:40",
+                                            device_node: None,
+                                            subsystem_name: None,
+                                            system_name: "pci0000:40",
+                                            instance_number: Some(
+                                                40,
+                                            ),
+                                            device_type: None,
+                                            driver: None,
+                                            action: None,
+                                            parent: None,
+                                        },
+                                    ),
+                                },
+                            ),
+                        },
+                    ),
+                },
+            ),
+        },
+    ),
+}
+  [properties]
+    - "DEVLINKS" "/dev/disk/by-path/pci-0000:41:00.0-nvme-1-part1 /dev/disk/by-id/nvme-eui.002538520140f0f4-part1 /dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_500GB_S4EVNJ0N214331P-part1 /dev/disk/by-id/lvm-pv-uuid-IrTsSY-BFYc-5mQt-vams-euae-G5t7-RgocGd /dev/disk/by-partuuid/b5e4250d-01"
+    - "DEVNAME" "/dev/nvme1n1p1"
+    - "DEVPATH" "/devices/pci0000:40/0000:40:01.1/0000:41:00.0/nvme/nvme1/nvme1n1/nvme1n1p1"
+    - "DEVTYPE" "partition"
+    - "ID_FS_TYPE" "LVM2_member"
+    - "ID_FS_USAGE" "raid"
+    - "ID_FS_UUID" "IrTsSY-BFYc-5mQt-vams-euae-G5t7-RgocGd"
+    - "ID_FS_UUID_ENC" "IrTsSY-BFYc-5mQt-vams-euae-G5t7-RgocGd"
+    - "ID_FS_VERSION" "LVM2 001"
+    - "ID_MODEL" "LVM PV IrTsSY-BFYc-5mQt-vams-euae-G5t7-RgocGd on /dev/nvme1n1p1"
+    - "ID_PART_ENTRY_DISK" "259:0"
+    - "ID_PART_ENTRY_FLAGS" "0x80"
+    - "ID_PART_ENTRY_NUMBER" "1"
+    - "ID_PART_ENTRY_OFFSET" "2048"
+    - "ID_PART_ENTRY_SCHEME" "dos"
+    - "ID_PART_ENTRY_SIZE" "976771072"
+    - "ID_PART_ENTRY_TYPE" "0x8e"
+    - "ID_PART_ENTRY_UUID" "b5e4250d-01"
+    - "ID_PART_TABLE_TYPE" "dos"
+    - "ID_PART_TABLE_UUID" "b5e4250d"
+    - "ID_PATH" "pci-0000:41:00.0-nvme-1"
+    - "ID_PATH_TAG" "pci-0000_41_00_0-nvme-1"
+    - "ID_SERIAL" "Samsung SSD 970 EVO Plus 500GB_S4EVNJ0N214331P"
+    - "ID_SERIAL_SHORT" "S4EVNJ0N214331P"
+    - "ID_WWN" "eui.002538520140f0f4"
+    - "MAJOR" "259"
+    - "MINOR" "1"
+    - "PARTN" "1"
+    - "SUBSYSTEM" "block"
+    - "SYSTEMD_ALIAS" "/dev/block/259:1"
+    - "SYSTEMD_READY" "1"
+    - "SYSTEMD_WANTS" "lvm2-pvscan@259:1.service"
+    - "TAGS" ":systemd:"
+    - "UDISKS_IGNORE" "1"
+    - "USEC_INITIALIZED" "4719635"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1792,
+    ),
+    system_path: "/sys/devices/virtual/block/loop0",
+    device_path: "/devices/virtual/block/loop0",
+    device_node: Some(
+        "/dev/loop0",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop0",
+    instance_number: Some(
+        0,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop0"
+    - "DEVPATH" "/devices/virtual/block/loop0"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "0"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1496068"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1793,
+    ),
+    system_path: "/sys/devices/virtual/block/loop1",
+    device_path: "/devices/virtual/block/loop1",
+    device_node: Some(
+        "/dev/loop1",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop1",
+    instance_number: Some(
+        1,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop1"
+    - "DEVPATH" "/devices/virtual/block/loop1"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "1"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1496078"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1802,
+    ),
+    system_path: "/sys/devices/virtual/block/loop10",
+    device_path: "/devices/virtual/block/loop10",
+    device_node: Some(
+        "/dev/loop10",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop10",
+    instance_number: Some(
+        10,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop10"
+    - "DEVPATH" "/devices/virtual/block/loop10"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "10"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "5711834"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1803,
+    ),
+    system_path: "/sys/devices/virtual/block/loop11",
+    device_path: "/devices/virtual/block/loop11",
+    device_node: Some(
+        "/dev/loop11",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop11",
+    instance_number: Some(
+        11,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop11"
+    - "DEVPATH" "/devices/virtual/block/loop11"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "11"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "5712121"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1804,
+    ),
+    system_path: "/sys/devices/virtual/block/loop12",
+    device_path: "/devices/virtual/block/loop12",
+    device_node: Some(
+        "/dev/loop12",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop12",
+    instance_number: Some(
+        12,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop12"
+    - "DEVPATH" "/devices/virtual/block/loop12"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "12"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "5786197"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1805,
+    ),
+    system_path: "/sys/devices/virtual/block/loop13",
+    device_path: "/devices/virtual/block/loop13",
+    device_node: Some(
+        "/dev/loop13",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop13",
+    instance_number: Some(
+        13,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop13"
+    - "DEVPATH" "/devices/virtual/block/loop13"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "13"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "5830316"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1806,
+    ),
+    system_path: "/sys/devices/virtual/block/loop14",
+    device_path: "/devices/virtual/block/loop14",
+    device_node: Some(
+        "/dev/loop14",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop14",
+    instance_number: Some(
+        14,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop14"
+    - "DEVPATH" "/devices/virtual/block/loop14"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "14"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "5879501"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1807,
+    ),
+    system_path: "/sys/devices/virtual/block/loop15",
+    device_path: "/devices/virtual/block/loop15",
+    device_node: Some(
+        "/dev/loop15",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop15",
+    instance_number: Some(
+        15,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop15"
+    - "DEVPATH" "/devices/virtual/block/loop15"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "15"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6073382"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1808,
+    ),
+    system_path: "/sys/devices/virtual/block/loop16",
+    device_path: "/devices/virtual/block/loop16",
+    device_node: Some(
+        "/dev/loop16",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop16",
+    instance_number: Some(
+        16,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop16"
+    - "DEVPATH" "/devices/virtual/block/loop16"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "16"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6032655"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1809,
+    ),
+    system_path: "/sys/devices/virtual/block/loop17",
+    device_path: "/devices/virtual/block/loop17",
+    device_node: Some(
+        "/dev/loop17",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop17",
+    instance_number: Some(
+        17,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop17"
+    - "DEVPATH" "/devices/virtual/block/loop17"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "17"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6107267"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1810,
+    ),
+    system_path: "/sys/devices/virtual/block/loop18",
+    device_path: "/devices/virtual/block/loop18",
+    device_node: Some(
+        "/dev/loop18",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop18",
+    instance_number: Some(
+        18,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop18"
+    - "DEVPATH" "/devices/virtual/block/loop18"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "18"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6144244"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1811,
+    ),
+    system_path: "/sys/devices/virtual/block/loop19",
+    device_path: "/devices/virtual/block/loop19",
+    device_node: Some(
+        "/dev/loop19",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop19",
+    instance_number: Some(
+        19,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop19"
+    - "DEVPATH" "/devices/virtual/block/loop19"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "19"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6178323"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1794,
+    ),
+    system_path: "/sys/devices/virtual/block/loop2",
+    device_path: "/devices/virtual/block/loop2",
+    device_node: Some(
+        "/dev/loop2",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop2",
+    instance_number: Some(
+        2,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop2"
+    - "DEVPATH" "/devices/virtual/block/loop2"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "2"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1496103"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1812,
+    ),
+    system_path: "/sys/devices/virtual/block/loop20",
+    device_path: "/devices/virtual/block/loop20",
+    device_node: Some(
+        "/dev/loop20",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop20",
+    instance_number: Some(
+        20,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop20"
+    - "DEVPATH" "/devices/virtual/block/loop20"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "20"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6178364"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1813,
+    ),
+    system_path: "/sys/devices/virtual/block/loop21",
+    device_path: "/devices/virtual/block/loop21",
+    device_node: Some(
+        "/dev/loop21",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop21",
+    instance_number: Some(
+        21,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop21"
+    - "DEVPATH" "/devices/virtual/block/loop21"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "21"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6178299"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1814,
+    ),
+    system_path: "/sys/devices/virtual/block/loop22",
+    device_path: "/devices/virtual/block/loop22",
+    device_node: Some(
+        "/dev/loop22",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop22",
+    instance_number: Some(
+        22,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop22"
+    - "DEVPATH" "/devices/virtual/block/loop22"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "22"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6218390"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1815,
+    ),
+    system_path: "/sys/devices/virtual/block/loop23",
+    device_path: "/devices/virtual/block/loop23",
+    device_node: Some(
+        "/dev/loop23",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop23",
+    instance_number: Some(
+        23,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop23"
+    - "DEVPATH" "/devices/virtual/block/loop23"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "23"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6218471"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1816,
+    ),
+    system_path: "/sys/devices/virtual/block/loop24",
+    device_path: "/devices/virtual/block/loop24",
+    device_node: Some(
+        "/dev/loop24",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop24",
+    instance_number: Some(
+        24,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop24"
+    - "DEVPATH" "/devices/virtual/block/loop24"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "24"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6288283"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1817,
+    ),
+    system_path: "/sys/devices/virtual/block/loop25",
+    device_path: "/devices/virtual/block/loop25",
+    device_node: Some(
+        "/dev/loop25",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop25",
+    instance_number: Some(
+        25,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop25"
+    - "DEVPATH" "/devices/virtual/block/loop25"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "25"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6288298"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1818,
+    ),
+    system_path: "/sys/devices/virtual/block/loop26",
+    device_path: "/devices/virtual/block/loop26",
+    device_node: Some(
+        "/dev/loop26",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop26",
+    instance_number: Some(
+        26,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop26"
+    - "DEVPATH" "/devices/virtual/block/loop26"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "26"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6326497"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1819,
+    ),
+    system_path: "/sys/devices/virtual/block/loop27",
+    device_path: "/devices/virtual/block/loop27",
+    device_node: Some(
+        "/dev/loop27",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop27",
+    instance_number: Some(
+        27,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop27"
+    - "DEVPATH" "/devices/virtual/block/loop27"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "27"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6413529"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1820,
+    ),
+    system_path: "/sys/devices/virtual/block/loop28",
+    device_path: "/devices/virtual/block/loop28",
+    device_node: Some(
+        "/dev/loop28",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop28",
+    instance_number: Some(
+        28,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop28"
+    - "DEVPATH" "/devices/virtual/block/loop28"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "28"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6413761"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1821,
+    ),
+    system_path: "/sys/devices/virtual/block/loop29",
+    device_path: "/devices/virtual/block/loop29",
+    device_node: Some(
+        "/dev/loop29",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop29",
+    instance_number: Some(
+        29,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop29"
+    - "DEVPATH" "/devices/virtual/block/loop29"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "29"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6553214"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1795,
+    ),
+    system_path: "/sys/devices/virtual/block/loop3",
+    device_path: "/devices/virtual/block/loop3",
+    device_node: Some(
+        "/dev/loop3",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop3",
+    instance_number: Some(
+        3,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop3"
+    - "DEVPATH" "/devices/virtual/block/loop3"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "3"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1496296"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1822,
+    ),
+    system_path: "/sys/devices/virtual/block/loop30",
+    device_path: "/devices/virtual/block/loop30",
+    device_node: Some(
+        "/dev/loop30",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop30",
+    instance_number: Some(
+        30,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop30"
+    - "DEVPATH" "/devices/virtual/block/loop30"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "30"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6498481"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1823,
+    ),
+    system_path: "/sys/devices/virtual/block/loop31",
+    device_path: "/devices/virtual/block/loop31",
+    device_node: Some(
+        "/dev/loop31",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop31",
+    instance_number: Some(
+        31,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop31"
+    - "DEVPATH" "/devices/virtual/block/loop31"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "31"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6553221"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1824,
+    ),
+    system_path: "/sys/devices/virtual/block/loop32",
+    device_path: "/devices/virtual/block/loop32",
+    device_node: Some(
+        "/dev/loop32",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop32",
+    instance_number: Some(
+        32,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop32"
+    - "DEVPATH" "/devices/virtual/block/loop32"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "32"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6581401"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1825,
+    ),
+    system_path: "/sys/devices/virtual/block/loop33",
+    device_path: "/devices/virtual/block/loop33",
+    device_node: Some(
+        "/dev/loop33",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop33",
+    instance_number: Some(
+        33,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop33"
+    - "DEVPATH" "/devices/virtual/block/loop33"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "33"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6625319"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1826,
+    ),
+    system_path: "/sys/devices/virtual/block/loop34",
+    device_path: "/devices/virtual/block/loop34",
+    device_node: Some(
+        "/dev/loop34",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop34",
+    instance_number: Some(
+        34,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop34"
+    - "DEVPATH" "/devices/virtual/block/loop34"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "34"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6687506"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1827,
+    ),
+    system_path: "/sys/devices/virtual/block/loop35",
+    device_path: "/devices/virtual/block/loop35",
+    device_node: Some(
+        "/dev/loop35",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop35",
+    instance_number: Some(
+        35,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop35"
+    - "DEVPATH" "/devices/virtual/block/loop35"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "35"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6716477"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1828,
+    ),
+    system_path: "/sys/devices/virtual/block/loop36",
+    device_path: "/devices/virtual/block/loop36",
+    device_node: Some(
+        "/dev/loop36",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop36",
+    instance_number: Some(
+        36,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop36"
+    - "DEVPATH" "/devices/virtual/block/loop36"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "36"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6765496"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1829,
+    ),
+    system_path: "/sys/devices/virtual/block/loop37",
+    device_path: "/devices/virtual/block/loop37",
+    device_node: Some(
+        "/dev/loop37",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop37",
+    instance_number: Some(
+        37,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop37"
+    - "DEVPATH" "/devices/virtual/block/loop37"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "37"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6765688"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1830,
+    ),
+    system_path: "/sys/devices/virtual/block/loop38",
+    device_path: "/devices/virtual/block/loop38",
+    device_node: Some(
+        "/dev/loop38",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop38",
+    instance_number: Some(
+        38,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop38"
+    - "DEVPATH" "/devices/virtual/block/loop38"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "38"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6854677"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1831,
+    ),
+    system_path: "/sys/devices/virtual/block/loop39",
+    device_path: "/devices/virtual/block/loop39",
+    device_node: Some(
+        "/dev/loop39",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop39",
+    instance_number: Some(
+        39,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop39"
+    - "DEVPATH" "/devices/virtual/block/loop39"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "39"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6897760"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1796,
+    ),
+    system_path: "/sys/devices/virtual/block/loop4",
+    device_path: "/devices/virtual/block/loop4",
+    device_node: Some(
+        "/dev/loop4",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop4",
+    instance_number: Some(
+        4,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop4"
+    - "DEVPATH" "/devices/virtual/block/loop4"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "4"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1496426"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1832,
+    ),
+    system_path: "/sys/devices/virtual/block/loop40",
+    device_path: "/devices/virtual/block/loop40",
+    device_node: Some(
+        "/dev/loop40",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop40",
+    instance_number: Some(
+        40,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop40"
+    - "DEVPATH" "/devices/virtual/block/loop40"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "40"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6938792"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1833,
+    ),
+    system_path: "/sys/devices/virtual/block/loop41",
+    device_path: "/devices/virtual/block/loop41",
+    device_node: Some(
+        "/dev/loop41",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop41",
+    instance_number: Some(
+        41,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop41"
+    - "DEVPATH" "/devices/virtual/block/loop41"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "41"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6953222"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1834,
+    ),
+    system_path: "/sys/devices/virtual/block/loop42",
+    device_path: "/devices/virtual/block/loop42",
+    device_node: Some(
+        "/dev/loop42",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop42",
+    instance_number: Some(
+        42,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop42"
+    - "DEVPATH" "/devices/virtual/block/loop42"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "42"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "6954244"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1835,
+    ),
+    system_path: "/sys/devices/virtual/block/loop43",
+    device_path: "/devices/virtual/block/loop43",
+    device_node: Some(
+        "/dev/loop43",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop43",
+    instance_number: Some(
+        43,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop43"
+    - "DEVPATH" "/devices/virtual/block/loop43"
+    - "DEVTYPE" "disk"
+    - "MAJOR" "7"
+    - "MINOR" "43"
+    - "SUBSYSTEM" "block"
+    - "SYSTEMD_READY" "0"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "8120472"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1797,
+    ),
+    system_path: "/sys/devices/virtual/block/loop5",
+    device_path: "/devices/virtual/block/loop5",
+    device_node: Some(
+        "/dev/loop5",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop5",
+    instance_number: Some(
+        5,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop5"
+    - "DEVPATH" "/devices/virtual/block/loop5"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "5"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1496386"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1798,
+    ),
+    system_path: "/sys/devices/virtual/block/loop6",
+    device_path: "/devices/virtual/block/loop6",
+    device_node: Some(
+        "/dev/loop6",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop6",
+    instance_number: Some(
+        6,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop6"
+    - "DEVPATH" "/devices/virtual/block/loop6"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "6"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1496437"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1799,
+    ),
+    system_path: "/sys/devices/virtual/block/loop7",
+    device_path: "/devices/virtual/block/loop7",
+    device_node: Some(
+        "/dev/loop7",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop7",
+    instance_number: Some(
+        7,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop7"
+    - "DEVPATH" "/devices/virtual/block/loop7"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "7"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "1496462"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1800,
+    ),
+    system_path: "/sys/devices/virtual/block/loop8",
+    device_path: "/devices/virtual/block/loop8",
+    device_node: Some(
+        "/dev/loop8",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop8",
+    instance_number: Some(
+        8,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop8"
+    - "DEVPATH" "/devices/virtual/block/loop8"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "8"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "5598275"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        1801,
+    ),
+    system_path: "/sys/devices/virtual/block/loop9",
+    device_path: "/devices/virtual/block/loop9",
+    device_node: Some(
+        "/dev/loop9",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "loop9",
+    instance_number: Some(
+        9,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVNAME" "/dev/loop9"
+    - "DEVPATH" "/devices/virtual/block/loop9"
+    - "DEVTYPE" "disk"
+    - "ID_FS_TYPE" "squashfs"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_VERSION" "4.0"
+    - "MAJOR" "7"
+    - "MINOR" "9"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "5700933"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        64768,
+    ),
+    system_path: "/sys/devices/virtual/block/dm-0",
+    device_path: "/devices/virtual/block/dm-0",
+    device_node: Some(
+        "/dev/dm-0",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "dm-0",
+    instance_number: Some(
+        0,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVLINKS" "/dev/mapper/ubuntu--vg-root /dev/disk/by-id/dm-uuid-LVM-r9fuJLOuB2mxdz3XGE8jYdUfffqTuoBh7k8snAcOSdHcOq313Ngv9yHpSfSjZiA8 /dev/disk/by-id/dm-name-ubuntu--vg-root /dev/ubuntu-vg/root /dev/disk/by-uuid/3faea2d6-de64-483d-a92a-93c871dbb544"
+    - "DEVNAME" "/dev/dm-0"
+    - "DEVPATH" "/devices/virtual/block/dm-0"
+    - "DEVTYPE" "disk"
+    - "DM_ACTIVATION" "1"
+    - "DM_LV_NAME" "root"
+    - "DM_NAME" "ubuntu--vg-root"
+    - "DM_STATE" "ACTIVE"
+    - "DM_SUSPENDED" "0"
+    - "DM_TABLE_STATE" "LIVE"
+    - "DM_UDEV_DISABLE_LIBRARY_FALLBACK_FLAG" "1"
+    - "DM_UDEV_PRIMARY_SOURCE_FLAG" "1"
+    - "DM_UDEV_RULES" "1"
+    - "DM_UDEV_RULES_VSN" "2"
+    - "DM_UUID" "LVM-r9fuJLOuB2mxdz3XGE8jYdUfffqTuoBh7k8snAcOSdHcOq313Ngv9yHpSfSjZiA8"
+    - "DM_VG_NAME" "ubuntu-vg"
+    - "ID_FS_TYPE" "ext4"
+    - "ID_FS_USAGE" "filesystem"
+    - "ID_FS_UUID" "3faea2d6-de64-483d-a92a-93c871dbb544"
+    - "ID_FS_UUID_ENC" "3faea2d6-de64-483d-a92a-93c871dbb544"
+    - "ID_FS_VERSION" "1.0"
+    - "MAJOR" "253"
+    - "MINOR" "0"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "4747199"
+
+Device {
+    initialized: true,
+    device_major_minor_number: Some(
+        64769,
+    ),
+    system_path: "/sys/devices/virtual/block/dm-1",
+    device_path: "/devices/virtual/block/dm-1",
+    device_node: Some(
+        "/dev/dm-1",
+    ),
+    subsystem_name: Some(
+        "block",
+    ),
+    system_name: "dm-1",
+    instance_number: Some(
+        1,
+    ),
+    device_type: Some(
+        "disk",
+    ),
+    driver: None,
+    action: None,
+    parent: None,
+}
+  [properties]
+    - "DEVLINKS" "/dev/mapper/ubuntu--vg-swap_1 /dev/ubuntu-vg/swap_1 /dev/disk/by-id/dm-uuid-LVM-r9fuJLOuB2mxdz3XGE8jYdUfffqTuoBhLU70D10qxUK48uhd8sWAyXpMyDR76Q73 /dev/disk/by-id/dm-name-ubuntu--vg-swap_1 /dev/disk/by-uuid/2b6aa987-afd3-4dd8-850a-71a292038912"
+    - "DEVNAME" "/dev/dm-1"
+    - "DEVPATH" "/devices/virtual/block/dm-1"
+    - "DEVTYPE" "disk"
+    - "DM_ACTIVATION" "1"
+    - "DM_LV_NAME" "swap_1"
+    - "DM_NAME" "ubuntu--vg-swap_1"
+    - "DM_STATE" "ACTIVE"
+    - "DM_SUSPENDED" "0"
+    - "DM_TABLE_STATE" "LIVE"
+    - "DM_UDEV_DISABLE_LIBRARY_FALLBACK_FLAG" "1"
+    - "DM_UDEV_PRIMARY_SOURCE_FLAG" "1"
+    - "DM_UDEV_RULES" "1"
+    - "DM_UDEV_RULES_VSN" "2"
+    - "DM_UUID" "LVM-r9fuJLOuB2mxdz3XGE8jYdUfffqTuoBhLU70D10qxUK48uhd8sWAyXpMyDR76Q73"
+    - "DM_VG_NAME" "ubuntu-vg"
+    - "ID_FS_TYPE" "swap"
+    - "ID_FS_USAGE" "other"
+    - "ID_FS_UUID" "2b6aa987-afd3-4dd8-850a-71a292038912"
+    - "ID_FS_UUID_ENC" "2b6aa987-afd3-4dd8-850a-71a292038912"
+    - "ID_FS_VERSION" "1"
+    - "MAJOR" "253"
+    - "MINOR" "1"
+    - "SUBSYSTEM" "block"
+    - "TAGS" ":systemd:"
+    - "USEC_INITIALIZED" "4747700"
