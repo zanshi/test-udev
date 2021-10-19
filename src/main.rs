@@ -100,6 +100,7 @@ fn get_device_serial() -> Result<String, LicenseSerialError> {
         .map_err(LicenseSerialError::UdevDeviceScanFailure)?;
 
     for device in devices {
+        println!();
         println!("{:?}", device)
     }
 
