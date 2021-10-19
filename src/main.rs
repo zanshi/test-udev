@@ -1,3 +1,4 @@
+use lfs_core;
 use udev::{self, Device};
 
 fn device_info(device: &Device) -> Option<String> {
@@ -53,27 +54,59 @@ fn get_root(device: Device) -> Device {
 }
 
 fn main() {
-    let mut enumerator = udev::Enumerator::new().unwrap();
+    let (root_fs, root_device_id) = lfs_core::read_mountinfo()
+        .unwrap()
+        .drain(..)
+        .filter(|m| m.mount_point.to_string_lossy() == "/")
+        .next()
+        .map(|m| (m.fs, m.dev))
+        .unwrap();
 
+    let device_list = lfs_core::BlockDeviceList::read().unwrap();
+
+    let block_device = device_list.find_by_id(root_device_id).unwrap();
+    println!("{:?}", block_device);
+
+    let mut enumerator = udev::Enumerator::new().unwrap();
     enumerator.match_subsystem("block").unwrap();
 
     for device in enumerator.scan_devices().unwrap() {
-        // let device = get_root(device.clone());
+        if let Some(devlinks) = device
+            .property_value("DEVLINKS")
+            .map(|s| s.to_string_lossy())
+        {
+            if devlinks.contains(&root_fs) {
+                println!("{:#?}", device);
 
-        // if let Some(info) = device_info(&device) {
-        println!();
-        // println!("{}", info);
-        println!("{:#?}", device);
+                println!("  [properties]");
+                for property in device.properties() {
+                    println!("    - {:?} {:?}", property.name(), property.value());
+                }
 
-        println!("  [properties]");
-        for property in device.properties() {
-            println!("    - {:?} {:?}", property.name(), property.value());
+                println!("{}", device.sysname().to_string_lossy());
+                println!("{}", device.syspath().to_string_lossy());
+                println!("{}", device.devpath().to_string_lossy());
+                println!("{}", device.devnode().unwrap().to_string_lossy());
+                println!("{}", device.devnum().unwrap());
+            }
         }
 
-        // println!("  [attributes]");
-        // for attribute in device.attributes() {
-        //     println!("    - {:?} {:?}", attribute.name(), attribute.value());
+        // // let device = get_root(device.clone());
+
+        // // if let Some(info) = device_info(&device) {
+        // println!();
+        // // println!("{}", info);
+        // println!("{:#?}", device);
+
+        // println!("  [properties]");
+        // for property in device.properties() {
+        //     println!("    - {:?} {:?}", property.name(), property.value());
         // }
-        // }
+
+        // // println!("  [attributes]");
+        // // for attribute in device.attributes() {
+        // //     println!("    - {:?} {:?}", attribute.name(), attribute.value());
+        // // }
+        // // }
     }
 }
