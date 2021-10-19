@@ -130,6 +130,7 @@ name = "test-udev"
 version = "0.1.0"
 dependencies = [
  "lfs-core",
+ "thiserror",
  "udev",
 ]
 

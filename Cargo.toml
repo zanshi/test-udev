@@ -8,3 +8,4 @@ edition = "2018"
 [dependencies]
 udev = "0.6.2"
 lfs-core = "0.5"
+thiserror = "1"

@@ -1,128 +1,70 @@
-use lfs_core;
-use udev::{self, Device};
+use std::error::Error;
 
-fn device_info(device: &Device) -> Option<String> {
-    let serial = device
-        .property_value("ID_SERIAL_SHORT")
-        .filter(|s| !s.is_empty())
-        .map(|s| s.to_string_lossy());
-    let dev_name = device
-        .property_value("DEVNAME")
-        .filter(|s| !s.is_empty())
-        .map(|s| s.to_string_lossy());
+use lfs_core::{self, DeviceId};
+use udev;
 
-    if let (Some(serial), Some(dev_name)) = (serial, dev_name) {
-        let info = format!("{}     {}", &serial, &dev_name);
-
-        Some(info)
-    } else {
-        None
-    }
-
-    // println!();
-    // println!(
-    //     "Device: {}, serial: {}",
-    //     device().to_string_lossy(),
-    //     serial.to_string_lossy()
-    // );
-
-    // println!();
-    // println!("{:#?}", device);
-
-    // println!("  [properties]");
-    // for property in device.properties() {
-    //     println!("    - {:?} {:?}", property.name(), property.value());
-    // }
-
-    // println!("  [attributes]");
-    // for attribute in device.attributes() {
-    //     println!("    - {:?} {:?}", attribute.name(), attribute.value());
-    // }
+#[derive(thiserror::Error, Debug)]
+pub enum LicenseSerialError {
+    #[error("Failed to mount points")]
+    MountPointReadFailure(#[source] lfs_core::Error),
+    #[error("Failed to get root file system device ID")]
+    RootDeviceIdNotFound,
+    #[error("Failed to read device block list")]
+    DeviceBlockListReadFailure,
+    #[error("Failed to find block device")]
+    BlockDeviceNotFound,
+    #[error("Failed to scan devices")]
+    UdevDeviceScanFailure(#[source] std::io::Error),
+    #[error("Failed to find udev device")]
+    UdevDeviceNotFound,
+    #[error("Serial not found")]
+    SerialNotFound,
 }
 
-fn get_root(device: Device) -> Device {
-    match device.parent() {
-        Some(parent) => {
-            if let Some(_) = parent.devtype().filter(|s| *s == "disk") {
-                get_root(parent)
-            } else {
-                device
-            }
-        }
-        None => device,
-    }
-}
+fn get_device_serial() -> Result<String, LicenseSerialError> {
+    let mounts =
+        lfs_core::read_mountinfo().map_err(|e| LicenseSerialError::MountPointReadFailure(e))?;
 
-fn main() {
-    let root_device_id = lfs_core::read_mountinfo()
-        .unwrap()
-        .drain(..)
+    let root_device_id: DeviceId = mounts
+        .into_iter()
         .filter(|m| m.mount_point.to_string_lossy() == "/")
         .next()
         .map(|m| m.dev)
-        .unwrap();
+        .ok_or_else(|| LicenseSerialError::RootDeviceIdNotFound)?;
 
-    let device_list = lfs_core::BlockDeviceList::read().unwrap();
+    let device_list = lfs_core::BlockDeviceList::read()
+        .map_err(|e| LicenseSerialError::DeviceBlockListReadFailure)?;
 
-    let block_device = device_list.find_by_id(root_device_id).unwrap();
-    // println!("{:?}", block_device);
+    let block_device = device_list
+        .find_by_id(root_device_id)
+        .ok_or_else(|| LicenseSerialError::BlockDeviceNotFound)?;
 
     let mut enumerator = udev::Enumerator::new().unwrap();
     enumerator.match_subsystem("block").unwrap();
 
-    for device in enumerator.scan_devices().unwrap() {
+    let devices = enumerator
+        .scan_devices()
+        .map_err(|e| LicenseSerialError::UdevDeviceScanFailure(e))?;
 
-        if device.sysname().to_string_lossy() == block_device.name {
-            // println!("{:#?}", device);
+    let device = devices
+        .into_iter()
+        .filter(|d| d.sysname().to_string_lossy() == block_device.name)
+        .next()
+        .ok_or_else(|| LicenseSerialError::UdevDeviceNotFound)?;
 
-            let serial_short = device.property_value("ID_SERIAL_SHORT").map(|s| s.to_string_lossy());
-            let serial = device.property_value("ID_SERIAL").map(|s| s.to_string_lossy());
+    let serial = device
+        .property_value("ID_SERIAL_SHORT")
+        .or_else(|| device.property_value("ID_SERIAL"))
+        .map(|s| s.to_string_lossy().to_string())
+        .ok_or_else(|| LicenseSerialError::SerialNotFound)?;
 
-            if let Some(serial_short) = serial_short {
-                println!("{}", serial_short);
-            } else if let Some(serial) = serial {
-                println!("{}", serial);
-            } else {
-                println!("Failed to find serial!");
-            }
-        }
+    Ok(serial)
+}
 
-        // if let Some(devlinks) = device
-        //     .property_value("DEVLINKS")
-        //     .map(|s| s.to_string_lossy())
-        // {
-        //    if devlinks.contains(&root_fs) {
-        //         println!("{:#?}", device);
+fn main() -> Result<(), Box<dyn Error>> {
+    let serial = get_device_serial()?;
 
-        //         println!("  [properties]");
-        //         for property in device.properties() {
-        //             println!("    - {:?} {:?}", property.name(), property.value());
-        //         }
+    println!("Serial: {}", serial);
 
-        //         println!("{}", device.sysname().to_string_lossy());
-        //         println!("{}", device.syspath().to_string_lossy());
-        //         println!("{}", device.devpath().to_string_lossy());
-        //         println!("{}", device.devnode().unwrap().to_string_lossy());
-        //         println!("{}", device.devnum().unwrap());
-        //    }
-        // }
-
-        // // let device = get_root(device.clone());
-
-        // // if let Some(info) = device_info(&device) {
-        // println!();
-        // // println!("{}", info);
-        // println!("{:#?}", device);
-
-        // println!("  [properties]");
-        // for property in device.properties() {
-        //     println!("    - {:?} {:?}", property.name(), property.value());
-        // }
-
-        // // println!("  [attributes]");
-        // // for attribute in device.attributes() {
-        // //     println!("    - {:?} {:?}", attribute.name(), attribute.value());
-        // // }
-        // // }
-    }
+    Ok(())
 }
