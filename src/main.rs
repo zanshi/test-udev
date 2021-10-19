@@ -65,7 +65,7 @@ fn main() {
     let device_list = lfs_core::BlockDeviceList::read().unwrap();
 
     let block_device = device_list.find_by_id(root_device_id).unwrap();
-    println!("{:?}", block_device);
+    // println!("{:?}", block_device);
 
     let mut enumerator = udev::Enumerator::new().unwrap();
     enumerator.match_subsystem("block").unwrap();
@@ -73,10 +73,17 @@ fn main() {
     for device in enumerator.scan_devices().unwrap() {
 
         if device.sysname().to_string_lossy() == block_device.name {
-            println!("{:#?}", device);
+            // println!("{:#?}", device);
 
-            if let Some(serial) = device.property_value("ID_SERIAL_SHORT") {
-                println!("{}", serial.to_string_lossy());
+            let serial_short = device.property_value("ID_SERIAL_SHORT").map(|s| s.to_string_lossy());
+            let serial = device.property_value("ID_SERIAL").map(|s| s.to_string_lossy());
+
+            if let Some(serial_short) = serial_short {
+                println!("{}", serial_short);
+            } else if let Some(serial) = serial {
+                println!("{}", serial);
+            } else {
+                println!("Failed to find serial!");
             }
         }
 
