@@ -1,10 +1,11 @@
-use std::{error::Error, path::Path};
-
-use lfs_core::{self, DeviceId, Disk, Mount};
+use lfs_core::{DeviceId, Disk, Mount};
 use proc_mounts::MountIter;
+use std::{error::Error, path::Path};
 
 #[derive(thiserror::Error, Debug)]
 pub enum LicenseSerialError {
+    #[error("Udev error")]
+    UdevError(#[source] std::io::Error),
     #[error("Failed to mount points")]
     MountInfoReadFailure(#[source] lfs_core::Error),
     #[error("Failed to get root file system device ID")]
@@ -43,8 +44,10 @@ fn read_lvm_slave_name(lvm_disk_slaves_dir: String) -> Result<String, LicenseSer
 }
 
 fn get_device_serial_from_name(name: &str) -> Result<String, LicenseSerialError> {
-    let mut enumerator = udev::Enumerator::new().unwrap();
-    enumerator.match_subsystem("block").unwrap();
+    let mut enumerator = udev::Enumerator::new().map_err(LicenseSerialError::UdevError)?;
+    enumerator
+        .match_subsystem("block")
+        .map_err(LicenseSerialError::UdevError)?;
 
     let devices = enumerator
         .scan_devices()
@@ -85,15 +88,13 @@ fn get_regular_device_serial(root_device_id: DeviceId) -> Result<String, License
     get_device_serial_from_name(&block_device.name)
 }
 
-fn get_device_serial() -> Result<String, LicenseSerialError> {
+fn get_root_mount() -> Result<Mount, LicenseSerialError> {
     let mounts = lfs_core::read_mounts().map_err(LicenseSerialError::MountInfoReadFailure)?;
 
     let mut root_mount = mounts
         .iter()
         .find(|m| m.info.mount_point == Path::new("/"))
         .ok_or(LicenseSerialError::RootDeviceIdNotFound)?;
-
-    println!("{:?}", root_mount);
 
     if root_mount.info.fs == "overlayroot" {
         let proc_mounts = MountIter::new()?;
@@ -104,21 +105,26 @@ fn get_device_serial() -> Result<String, LicenseSerialError> {
             .find(|m| m.dest == Path::new("/"))
             .ok_or(LicenseSerialError::RootDeviceIdNotFound)?;
 
-        println!("{:#?}", overlay_root_mount.options);
-
         let lower_dir = overlay_root_mount
             .options
             .iter()
-            .find(|s| *s == "lower_dir")
-            .ok_or(LicenseSerialError::OverlayRootLowerDirNotFound)?;
-
-        println!("{}", lower_dir);
+            .find(|s| s.starts_with("lowerdir="))
+            .ok_or(LicenseSerialError::OverlayRootLowerDirNotFound)?
+            .trim_start_matches("lowerdir=");
 
         root_mount = mounts
             .iter()
-            .find(|m| m.info.mount_point == Path::new(""))
+            .find(|m| m.info.mount_point == Path::new(lower_dir))
             .ok_or(LicenseSerialError::RootDeviceIdNotFound)?;
     }
+
+    let root_mount = root_mount.clone();
+
+    Ok(root_mount)
+}
+
+fn get_device_serial() -> Result<String, LicenseSerialError> {
+    let root_mount = get_root_mount()?;
 
     let root_disk = root_mount
         .disk
