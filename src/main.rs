@@ -54,12 +54,12 @@ fn get_root(device: Device) -> Device {
 }
 
 fn main() {
-    let (root_fs, root_device_id) = lfs_core::read_mountinfo()
+    let root_device_id = lfs_core::read_mountinfo()
         .unwrap()
         .drain(..)
         .filter(|m| m.mount_point.to_string_lossy() == "/")
         .next()
-        .map(|m| (m.fs, m.dev))
+        .map(|m| m.dev)
         .unwrap();
 
     let device_list = lfs_core::BlockDeviceList::read().unwrap();
@@ -71,25 +71,34 @@ fn main() {
     enumerator.match_subsystem("block").unwrap();
 
     for device in enumerator.scan_devices().unwrap() {
-        if let Some(devlinks) = device
-            .property_value("DEVLINKS")
-            .map(|s| s.to_string_lossy())
-        {
-            if devlinks.contains(&root_fs) {
-                println!("{:#?}", device);
 
-                println!("  [properties]");
-                for property in device.properties() {
-                    println!("    - {:?} {:?}", property.name(), property.value());
-                }
+        if device.sysname().to_string_lossy() == block_device.name {
+            println!("{:#?}", device);
 
-                println!("{}", device.sysname().to_string_lossy());
-                println!("{}", device.syspath().to_string_lossy());
-                println!("{}", device.devpath().to_string_lossy());
-                println!("{}", device.devnode().unwrap().to_string_lossy());
-                println!("{}", device.devnum().unwrap());
+            if let Some(serial) = device.property_value("ID_SERIAL_SHORT") {
+                println!("{}", serial.to_string_lossy());
             }
         }
+
+        // if let Some(devlinks) = device
+        //     .property_value("DEVLINKS")
+        //     .map(|s| s.to_string_lossy())
+        // {
+        //    if devlinks.contains(&root_fs) {
+        //         println!("{:#?}", device);
+
+        //         println!("  [properties]");
+        //         for property in device.properties() {
+        //             println!("    - {:?} {:?}", property.name(), property.value());
+        //         }
+
+        //         println!("{}", device.sysname().to_string_lossy());
+        //         println!("{}", device.syspath().to_string_lossy());
+        //         println!("{}", device.devpath().to_string_lossy());
+        //         println!("{}", device.devnode().unwrap().to_string_lossy());
+        //         println!("{}", device.devnum().unwrap());
+        //    }
+        // }
 
         // // let device = get_root(device.clone());
 
