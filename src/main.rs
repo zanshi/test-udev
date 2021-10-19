@@ -92,15 +92,28 @@ fn get_device_serial() -> Result<String, LicenseSerialError> {
 
     println!("{:?}", root_mount);
 
-    let root_disk = &root_mount
-        .disk
-        .ok_or(LicenseSerialError::RootDiskNotFound)?;
+    let mut enumerator = udev::Enumerator::new().unwrap();
+    enumerator.match_subsystem("block").unwrap();
 
-    if root_disk.lvm {
-        get_lvm_device_serial(root_disk)
-    } else {
-        get_regular_device_serial(root_mount.info.dev)
+    let devices = enumerator
+        .scan_devices()
+        .map_err(LicenseSerialError::UdevDeviceScanFailure)?;
+
+    for device in devices {
+        println!("{:?}", device)
     }
+
+    panic!();
+
+    // let root_disk = &root_mount
+    //     .disk
+    //     .ok_or(LicenseSerialError::RootDiskNotFound)?;
+
+    // if root_disk.lvm {
+    //     get_lvm_device_serial(root_disk)
+    // } else {
+    //     get_regular_device_serial(root_mount.info.dev)
+    // }
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
