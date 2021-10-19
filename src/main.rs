@@ -1,16 +1,18 @@
 use std::error::Error;
 
-use lfs_core::{self, DeviceId};
+use lfs_core::{self, Disk, Mount};
 use udev;
 
 #[derive(thiserror::Error, Debug)]
 pub enum LicenseSerialError {
     #[error("Failed to mount points")]
-    MountPointReadFailure(#[source] lfs_core::Error),
+    MountInfoReadFailure(#[source] lfs_core::Error),
     #[error("Failed to get root file system device ID")]
     RootDeviceIdNotFound,
+    #[error("Failed to get root device disk")]
+    RootDiskNotFound,
     #[error("Failed to read device block list")]
-    DeviceBlockListReadFailure,
+    DeviceBlockListReadFailure(#[source] lfs_core::Error),
     #[error("Failed to find block device")]
     BlockDeviceNotFound,
     #[error("Failed to scan devices")]
@@ -19,21 +21,46 @@ pub enum LicenseSerialError {
     UdevDeviceNotFound,
     #[error("Serial not found")]
     SerialNotFound,
+    #[error("Slave devices not found for LVM root")]
+    LvmDeviceSlavesNotFound(#[source] std::io::Error),
+    #[error("Slave device not found for LVM root")]
+    LvmDeviceSlaveNotFound,
+    #[error("Io Error: `{0}`")]
+    IoError(#[from] std::io::Error),
 }
 
-fn get_device_serial() -> Result<String, LicenseSerialError> {
-    let mounts =
-        lfs_core::read_mountinfo().map_err(|e| LicenseSerialError::MountPointReadFailure(e))?;
-
-    let root_device_id: DeviceId = mounts
-        .into_iter()
-        .filter(|m| m.mount_point.to_string_lossy() == "/")
+fn read_lvm_slave_name(lvm_disk_slaves_dir: String) -> Result<String, LicenseSerialError> {
+    let entry = std::fs::read_dir(lvm_disk_slaves_dir)?
         .next()
-        .map(|m| m.dev)
-        .ok_or_else(|| LicenseSerialError::RootDeviceIdNotFound)?;
+        .ok_or_else(|| LicenseSerialError::LvmDeviceSlaveNotFound)?;
+
+    let entry = entry?;
+    let lvm_physical_disk_name = entry.file_name().to_string_lossy().to_string();
+
+    Ok(lvm_physical_disk_name)
+}
+
+fn get_lvm_device_serial(mount: Mount, root_disk: Disk) -> Result<String, LicenseSerialError> {
+    let root_mount_info = &mount.info;
+    let root_device_id = root_mount_info.dev;
+
+    let disk_name = &root_disk.name;
+
+    let lvm_disk_slaves_dir = format!("/sys/block/{}/slaves", disk_name);
+
+    let lvm_physical_disk_name = read_lvm_slave_name(lvm_disk_slaves_dir)?;
+
+    // println!("{:?}", slave);
+
+    Ok("".to_string())
+}
+
+fn get_regular_device_serial(mount: Mount) -> Result<String, LicenseSerialError> {
+    let root_mount_info = mount.info;
+    let root_device_id = root_mount_info.dev;
 
     let device_list = lfs_core::BlockDeviceList::read()
-        .map_err(|e| LicenseSerialError::DeviceBlockListReadFailure)?;
+        .map_err(|e| LicenseSerialError::DeviceBlockListReadFailure(e))?;
 
     let block_device = device_list
         .find_by_id(root_device_id)
@@ -59,6 +86,28 @@ fn get_device_serial() -> Result<String, LicenseSerialError> {
         .ok_or_else(|| LicenseSerialError::SerialNotFound)?;
 
     Ok(serial)
+}
+
+fn get_device_serial() -> Result<String, LicenseSerialError> {
+    let mounts =
+        lfs_core::read_mounts().map_err(|e| LicenseSerialError::MountInfoReadFailure(e))?;
+
+    let root_mount = mounts
+        .into_iter()
+        .filter(|m| m.info.mount_point.to_string_lossy() == "/")
+        .next()
+        .ok_or_else(|| LicenseSerialError::RootDeviceIdNotFound)?;
+
+    let root_disk = root_mount
+        .disk
+        .clone()
+        .ok_or_else(|| LicenseSerialError::RootDiskNotFound)?;
+
+    if root_disk.lvm {
+        get_lvm_device_serial(root_mount, root_disk)
+    } else {
+        get_regular_device_serial(root_mount)
+    }
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
